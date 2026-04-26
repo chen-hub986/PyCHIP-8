@@ -8,6 +8,8 @@ from input import get_key_state
 
 def main():
     pygame.init()
+    pygame.mixer.init()
+    beep_sound = pygame.mixer.Sound("beep.mp3")
     pygame.display.set_caption("PyChip8")
     display = Display(scale=10)
     cpu = Chip8cpu()
@@ -29,12 +31,16 @@ def main():
 
         cpu.keys = get_key_state()
 
-
-        opcode = cpu.fetch()
-        cpu.decode_and_execute(opcode)
+        for _ in range(10):
+            opcode = cpu.fetch()
+            cpu.decode_and_execute(opcode)
         display.render(cpu.display)
 
-        clock.tick(500)
+        if cpu.sound_timer > 0 and not pygame.mixer.get_busy():
+            beep_sound.play()
+            print("BEEP!")
+
+        clock.tick(60)
 
     display.quit()
     sys.exit()
