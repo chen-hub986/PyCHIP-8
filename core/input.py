@@ -1,10 +1,10 @@
 import pygame
 
 
-def get_key_state():
+def get_key_state() -> list[int]:
     keys = pygame.key.get_pressed()
 
-    key_mapping = {
+    key_mapping: dict[int, int] = {
         pygame.K_1: 0x1,
         pygame.K_2: 0x2,
         pygame.K_3: 0x3,
@@ -23,7 +23,7 @@ def get_key_state():
         pygame.K_v: 0xF
     }
 
-    key_state = [0] * 16
+    key_state: list[int] = [0] * 16
     for pygame_key, chip8_key in key_mapping.items():
         key_state[chip8_key] = 1 if keys[pygame_key] else 0
 

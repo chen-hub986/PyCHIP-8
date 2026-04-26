@@ -2,22 +2,22 @@ import random
 
 
 class Chip8cpu:
-    def __init__(self):
+    def __init__(self) -> None:
         print("Initializing Chip8")
 
-        self.memory = [0] * 4096
-        self.V = bytearray(16)
-        self.I = 0
-        self.pc = 0x200
-        self.stack = []
-        self.delay_timer = 0
-        self.sound_timer = 0
-        self.display = [[0] * 64 for _ in range(32)]
-        self.keys = [0] * 16
+        self.memory: list[int] = [0] * 4096
+        self.V: bytearray = bytearray(16)
+        self.I: int = 0
+        self.pc: int = 0x200
+        self.stack: list[int] = []
+        self.delay_timer: int = 0
+        self.sound_timer: int = 0
+        self.display: list[list[int]] = [[0] * 64 for _ in range(32)]
+        self.keys: list[int] = [0] * 16
 
         self._load_fonts()
 
-    def _load_fonts(self):
+    def _load_fonts(self) -> None:
         fonts = [
             0xF0, 0x90, 0x90, 0x90, 0xF0, # 0
             0x20, 0x60, 0x20, 0x20, 0x70, # 1
@@ -39,7 +39,7 @@ class Chip8cpu:
         for i, byte in enumerate(fonts):
             self.memory[i] = byte
 
-    def load_rom(self, rom):
+    def load_rom(self, rom: str) -> None:
         print("Loading rom...")
 
         try:
@@ -54,7 +54,7 @@ class Chip8cpu:
         except Exception as e:
             print(f"An error occurred while loading the rom: {e}")
 
-    def fetch(self):
+    def fetch(self) -> int:
         #print("Fetching...")
 
         high_byte = self.memory[self.pc]
@@ -65,13 +65,13 @@ class Chip8cpu:
 
         return opcode
 
-    def update_timers(self):
+    def update_timers(self) -> None:
         if self.delay_timer > 0:
             self.delay_timer -= 1
         if self.sound_timer > 0:
             self.sound_timer -= 1
 
-    def decode_and_execute(self, opcode):
+    def decode_and_execute(self, opcode: int) -> None:
         category = (opcode & 0xF000) >> 12
         x = (opcode & 0x0F00) >> 8
         y = (opcode & 0x00F0) >> 4

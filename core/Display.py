@@ -1,8 +1,9 @@
 import pygame
+from typing import Sequence
 
 
 class Display:
-    def __init__(self, scale=10):
+    def __init__(self, scale: int = 10) -> None:
         self.width = 64
         self.height = 32
         self.scale = scale
@@ -12,16 +13,16 @@ class Display:
         self.color_black = (0, 0, 0)
         self.color_white = (255, 255, 255)
 
-    def clear(self):
+    def clear(self) -> None:
         self.screen.fill(self.color_black)
         pygame.display.flip()
 
-    def render(self, cpu_display):
+    def render(self, cpu_display: Sequence[Sequence[int]]) -> None:
         for y in range(self.height):
             for x in range(self.width):
                 color = self.color_white if cpu_display[y][x] else self.color_black
                 pygame.draw.rect(self.screen, color, (x * self.scale, y * self.scale, self.scale, self.scale))
         pygame.display.flip()
 
-    def quit(self):
+    def quit(self) -> None:
         pygame.quit()
