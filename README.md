@@ -69,20 +69,6 @@ Z X C V
 
 Some ROMs show prompts like `7/4/*//`; these are CHIP-8 key indices and may not match your physical keyboard labels.
 
-### ROM Policy (GitHub)
-
-It is recommended not to commit ROM files to public repositories.
-
-Suggested `.gitignore` entries:
-
-```gitignore
-*.ch8
-PONG
-roms/
-```
-
-Keep only source code in the repo, and let users provide ROMs locally.
-
 ### Known Limitations
 
 - Opcode compatibility is still being expanded
@@ -168,20 +154,6 @@ Z X C V
 ```
 
 某些 ROM 會顯示像 `7/4/*//` 的提示，這是 CHIP-8 鍵位編號，不一定等於你的實體鍵盤字元。
-
-### ROM 上傳政策（GitHub）
-
-建議不要把 ROM 提交到公開儲存庫。
-
-建議在 `.gitignore` 加入：
-
-```gitignore
-*.ch8
-PONG
-roms/
-```
-
-只保留程式碼，ROM 由使用者在本機提供。
 
 ### 已知限制
 
