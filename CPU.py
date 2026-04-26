@@ -97,6 +97,9 @@ class Chip8cpu:
         elif category == 0x4:
             if self.V[x] != nn:
                 self.pc += 2
+        elif category == 0x5:
+            if self.V[x] == self.V[y]:
+                self.pc += 2
         elif category == 0x6:
             self.V[x] = nn
         elif category == 0x7:
@@ -104,8 +107,12 @@ class Chip8cpu:
         elif category == 0x8:
             if n == 0x0:
                 self.V[x] = self.V[y]
+            elif n == 0x1:
+                self.V[x] |= self.V[y]
             elif n == 0x2:
                 self.V[x] &= self.V[y]
+            elif n == 0x3:
+                self.V[x] ^= self.V[y]
             elif n == 0x4:
                 total = self.V[x] + self.V[y]
                 self.V[0xF] = 1 if total > 0xFF else 0
@@ -124,6 +131,9 @@ class Chip8cpu:
                 self.V[x] = (self.V[x] << 1) & 0xFF
             else:
                 print(f"Invalid opcode: {opcode:04X}")
+        elif category == 0x9:
+            if self.V[x] != self.V[y]:
+                self.pc += 2
         elif category == 0xC:
             self.V[x] = random.randint(0, 255) & nn
         elif category == 0xD:
