@@ -134,6 +134,8 @@ class Chip8cpu:
         elif category == 0x9:
             if self.V[x] != self.V[y]:
                 self.pc += 2
+        elif category == 0xB:
+            self.pc = nnn + self.V[0]
         elif category == 0xC:
             self.V[x] = random.randint(0, 255) & nn
         elif category == 0xD:
