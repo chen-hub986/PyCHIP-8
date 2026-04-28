@@ -7,6 +7,10 @@ from core.input import get_key_state
 
 
 def main() -> None:
+    if len(sys.argv) == 1:
+        print("USAGE: python.exe play.py [rom_path]")
+        sys.exit(1)
+
     pygame.init()
     pygame.mixer.init()
     beep_sound = pygame.mixer.Sound(str("beep.mp3"))
@@ -19,7 +23,7 @@ def main() -> None:
     time_event = pygame.USEREVENT + 1
     pygame.time.set_timer(time_event, 17)
 
-    cpu.load_rom(str("PONG"))  # You can change this to the path of your ROM file
+    cpu.load_rom(str(sys.argv[1]))  # You can change this to the path of your ROM file
 
     running = True
 
