@@ -66,8 +66,6 @@ A S D F
 Z X C V
 ```
 
-Some ROMs show prompts like `7/4/*//`; these are CHIP-8 key indices and may not match your physical keyboard labels.
-
 ### Known Limitations
 
 - Opcode compatibility is still being expanded
@@ -150,8 +148,6 @@ Q W E R
 A S D F
 Z X C V
 ```
-
-某些 ROM 會顯示像 `7/4/*//` 的提示，這是 CHIP-8 鍵位編號，不一定等於你的實體鍵盤字元。
 
 ### 已知限制
 
