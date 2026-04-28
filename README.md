@@ -33,11 +33,11 @@ CHIP-8/
 
 ### Quick Start
 
-```powershell
+```CMD
 python -m venv .venv
-.venv\Scripts\Activate.ps1
+.venv\Scripts\Activate
 pip install pygame
-python play.py
+python play.py [rom_path]
 ```
 
 ROM reference:
@@ -109,11 +109,11 @@ CHIP-8/
 
 ### 快速開始
 
-```powershell
+```CMD
 python -m venv .venv
-.venv\Scripts\Activate.ps1
+.venv\Scripts\Activate
 pip install pygame
-python play.py
+python play.py [rom_path]
 ```
 
 ROM 來源參考：
