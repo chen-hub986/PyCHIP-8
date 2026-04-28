@@ -45,7 +45,7 @@ def main() -> None:
             beep_sound.play()
             print("BEEP!")
 
-        clock.tick(50)
+        clock.tick(50) #You can change the value to adjust the speed of the emulation
 
     display.quit()
     sys.exit()
