@@ -34,27 +34,14 @@ CHIP-8/
 ### Quick Start
 
 ```CMD
-python -m venv .venv
-.venv\Scripts\Activate
+git clone https://github.com/chen-hub986/PyCHIP-8.git
+cd PyCHIP-8
 pip install pygame
 python play.py [rom_path]
 ```
 
 ROM reference:
 https://www.zophar.net/pdroms/chip8.html
-
-### ROM Loading
-
-Current `play.py` setting:
-
-```python
-cpu.load_rom(str("PONG"))
-```
-
-This means you need to place a ROM file named `PONG` in the project root directory.
-
-To use another ROM, update `cpu.load_rom(...)` in `play.py`.
-
 ### Controls
 
 Current key layout (`core/input.py`):
@@ -110,26 +97,14 @@ CHIP-8/
 ### 快速開始
 
 ```CMD
-python -m venv .venv
-.venv\Scripts\Activate
+git clone https://github.com/chen-hub986/PyCHIP-8.git
+cd PyCHIP-8
 pip install pygame
 python play.py [rom_path]
 ```
 
 ROM 來源參考：
 https://www.zophar.net/pdroms/chip8.html
-
-### ROM 載入
-
-`play.py` 目前設定：
-
-```python
-cpu.load_rom(str("PONG"))
-```
-
-代表你需要在專案根目錄放一個名為 `PONG` 的 ROM 檔。
-
-若要改成其他檔案，請修改 `play.py` 的 `cpu.load_rom(...)`。
 
 ### 操作鍵位
 
