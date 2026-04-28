@@ -5,6 +5,8 @@
 This is a CHIP-8 emulator built with Python, focused on simplicity, readability, and extensibility.
 It currently uses `pygame` for rendering, keyboard input, and audio.
 
+![Screenshot](Preview.png)
+
 ### Features
 
 - CHIP-8 core components: `memory`, `V` registers, `I`, `pc`, stack, and timers
@@ -67,6 +69,8 @@ MIT License
 
 這是一個使用 Python 開發的 CHIP-8 模擬器，重點是簡潔、可讀性高、易於擴充。
 目前使用 `pygame` 做顯示、鍵盤輸入與音效。
+
+![Screenshot](Preview.png)
 
 ### 功能特色
 
