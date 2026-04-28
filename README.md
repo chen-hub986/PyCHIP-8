@@ -56,7 +56,7 @@ Z X C V
 ### Known Limitations
 
 - Opcode compatibility is still being expanded
-- No built-in ROM picker or CLI options yet
+- ~~No built-in ROM picker or CLI options yet~~
 - Speed/FPS tuning is currently development-oriented
 
 ### License
@@ -120,7 +120,7 @@ Z X C V
 ### 已知限制
 
 - opcode 相容性仍在持續補齊
-- 尚未提供內建 ROM 選單或 CLI 參數
+- ~~尚無內建 ROM 選擇器或 CLI 選項~~
 - 速度與幀率調校目前偏開發導向
 
 ### 授權
