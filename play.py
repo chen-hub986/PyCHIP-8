@@ -23,7 +23,7 @@ def main() -> None:
     time_event = pygame.USEREVENT + 1
     pygame.time.set_timer(time_event, 17)
 
-    cpu.load_rom(str(sys.argv[1]))  # You can change this to the path of your ROM file
+    cpu.load_rom(str(sys.argv[1]))
 
     running = True
 
