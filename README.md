@@ -72,13 +72,6 @@ Z X C V
 - No built-in ROM picker or CLI options yet
 - Speed/FPS tuning is currently development-oriented
 
-### Roadmap
-
-- [ ] Complete opcode coverage and compatibility tests
-- [ ] Add ROM selection (CLI or file picker)
-- [ ] Externalize settings (CPU cycles, FPS, volume)
-- [ ] Add debug tooling (opcode trace, register snapshots)
-
 ### License
 
 MIT License
@@ -154,13 +147,6 @@ Z X C V
 - opcode 相容性仍在持續補齊
 - 尚未提供內建 ROM 選單或 CLI 參數
 - 速度與幀率調校目前偏開發導向
-
-### 開發路線
-
-- [ ] 補齊 CHIP-8 opcode 與相容性測試
-- [ ] 加入 ROM 選擇（CLI 或檔案選擇器）
-- [ ] 拆分設定（CPU cycles、FPS、音量）
-- [ ] 增加除錯資訊（opcode trace、寄存器快照）
 
 ### 授權
 
