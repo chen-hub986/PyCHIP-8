@@ -11,7 +11,7 @@ def main() -> None:
     pygame.init()
     pygame.mixer.init()
     beep_sound = pygame.mixer.Sound(str("beep.mp3"))
-    beep_sound.set_volume(0.1)
+    beep_sound.set_volume(0.1)#You can adjust the volume as needed
     pygame.display.set_caption("PyChip8")
     display = Display(scale=10)
     cpu = Chip8cpu()
@@ -20,7 +20,7 @@ def main() -> None:
     time_event = pygame.USEREVENT + 1
     pygame.time.set_timer(time_event, 17)
 
-    cpu.load_rom(str("PONG"))
+    cpu.load_rom(str("PONG"))#You can change this to the path of your ROM file
 
     running = True
 
