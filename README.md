@@ -51,8 +51,7 @@ Current `play.py` setting:
 cpu.load_rom(str("PONG"))
 ```
 
-This means a ROM file named `PONG` must exist at the project root.
-A `.ch8` extension is optional; only a correct path and valid CHIP-8 ROM binary are required.
+This means you need to place a ROM file named `PONG` in the project root directory.
 
 To use another ROM, update `cpu.load_rom(...)` in `play.py`.
 
@@ -138,7 +137,6 @@ cpu.load_rom(str("PONG"))
 ```
 
 代表你需要在專案根目錄放一個名為 `PONG` 的 ROM 檔。
-副檔名不是必要條件；只要路徑正確且內容是有效 CHIP-8 ROM 即可。
 
 若要改成其他檔案，請修改 `play.py` 的 `cpu.load_rom(...)`。
 
